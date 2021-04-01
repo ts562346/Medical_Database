@@ -13,5 +13,3 @@ JOIN longtermcontract ON (pharmaceuticalcompany.name = longtermcontract.PhC_Name
 WHERE TIMESTAMPDIFF(MONTH,longtermcontract.start, longtermcontract.end) < 30
 GROUP by longtermcontract.PhC_Name
 HAVING COUNT(longtermcontract.Pha_Address) > 1;
-
--- 
